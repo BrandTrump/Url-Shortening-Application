@@ -5,24 +5,37 @@ import { useState } from "react";
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className="fixed w-full shadow-lg p-8">
+    <nav className="fixed w-full p-8">
       <div className="flex justify-between items-center h-full w-full">
-        <Link href={"/"} className="font-bold text-2xl">
-          Shortly
-        </Link>
+        <div className="flex items-center space-x-8">
+          <Link href={"/"} className="font-bold text-3xl">
+            Shortly
+          </Link>
+          <div className="hidden sm:flex">
+            <ul className="hidden sm:flex space-x-4">
+              <li className="">
+                <Link href={"#"}>Features</Link>
+              </li>
+              <li className="">
+                <Link href={"#"}>Pricing</Link>
+              </li>
+              <li className="">
+                <Link href={"#"}>Resources</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div className="hidden sm:flex">
-          <ul className="hidden sm:flex space-x-4">
+          <ul className="hidden sm:flex space-x-4 items-center">
             <li className="">
-              <Link href={"#"}>Features</Link>
+              <Link href={"#"}>Login</Link>
             </li>
-            <li className="">
-              <Link href={"#"}>Pricing</Link>
-            </li>
-            <li className="">
-              <Link href={"#"}>Resources</Link>
+            <li className="bg-teal-400 text-white px-4 py-2 rounded-full">
+              <Link href={"#"}>Sign Up</Link>
             </li>
           </ul>
         </div>
+
         <div className="sm:hidden">
           {!toggle ? (
             <svg
@@ -41,34 +54,49 @@ function Navbar() {
               />
             </svg>
           ) : (
-            <div className="flex flex-col items-end">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6 cursor-pointer"
-                onClick={() => setToggle(false)}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+            <div className="absolute top-20 left-0 w-full z-50 border bg-violet-950 text-white font-bold rounded-2xl p-4">
+              <div className="flex flex-col items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6 cursor-pointer"
+                  onClick={() => setToggle(false)}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
 
-              <ul className="mt-5 space-y-4">
-                <li className="">
-                  <Link href={"#"}>Features</Link>
-                </li>
-                <li className="">
-                  <Link href={"#"}>Pricing</Link>
-                </li>
-                <li className="">
-                  <Link href={"#"}>Resources</Link>
-                </li>
-              </ul>
+                <div className="flex flex-col justify-between items-center text-center space-y-8 p-6">
+                  <ul className="mt-5 space-y-4">
+                    <li className="">
+                      <Link href={"#"}>Features</Link>
+                    </li>
+                    <li className="">
+                      <Link href={"#"}>Pricing</Link>
+                    </li>
+                    <li className="">
+                      <Link href={"#"}>Resources</Link>
+                    </li>
+                  </ul>
+
+                  <br className="h-1" />
+
+                  <ul className="space-y-4">
+                    <li className="">
+                      <Link href={"#"}>Login</Link>
+                    </li>
+                    <li className="bg-teal-400 text-white px-4 md:py-2 rounded-full w-96 py-3 cursor-pointer">
+                      <Link href={"#"}>Sign Up</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           )}
         </div>
