@@ -1,4 +1,5 @@
 import workingImg from "@/assets/images/illustration-working.svg";
+import ShorteningField from "@/components/ShorteningField";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,11 +22,13 @@ export default function Home() {
         </div>
         <Link
           href={"#"}
-          className="bg-teal-400 py-5 px-14 rounded-full cursor-pointer text-white font-bold text-xl"
+          className="bg-teal-400 py-5 px-14 rounded-full cursor-pointer text-white font-bold text-xl hover:bg-teal-600"
         >
           Get Started
         </Link>
       </div>
+
+      <ShorteningField />
     </div>
   );
 }
