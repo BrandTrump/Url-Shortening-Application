@@ -5,7 +5,7 @@ import { useState } from "react";
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className="fixed w-full p-8">
+    <nav className="fixed w-full p-8 bg-white">
       <div className="flex justify-between items-center h-full w-full">
         <div className="flex items-center space-x-8">
           <Link href={"/"} className="font-bold text-3xl">
@@ -91,7 +91,7 @@ function Navbar() {
                     <li className="">
                       <Link href={"#"}>Login</Link>
                     </li>
-                    <li className="bg-teal-400 text-white px-4 md:py-2 rounded-full w-96 py-3 cursor-pointer">
+                    <li className="bg-teal-400 text-white px-4 md:py-2 rounded-full w-96 py-3 cursor-pointer hover:bg-teal-800">
                       <Link href={"#"}>Sign Up</Link>
                     </li>
                   </ul>
