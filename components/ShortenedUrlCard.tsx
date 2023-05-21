@@ -18,8 +18,8 @@ function ShortenedUrlCard({
   };
 
   return (
-    <div className="px-40">
-      <div className="bg-violet-950 w-96 mx-auto p-10 mt-20 rounded-xl md:w-auto">
+    <div>
+      <div className="bg-violet-950 w-96 mx-auto p-10 mt-20 rounded-xl md:w-3/4">
         <div className="flex flex-col space-y-8 md:flex-row md:justify-between md:items-center md:space-y-0 md:space-x-10">
           <input
             type="text"
@@ -30,7 +30,7 @@ function ShortenedUrlCard({
           />
           <button
             onClick={handleSearch}
-            className="bg-teal-400 text-white font-bold p-3 rounded-md hover:bg-teal-600 disabled:bg-teal-800 md:px-10"
+            className="bg-teal-400 text-white font-bold p-3 rounded-md hover:bg-teal-200 disabled:bg-teal-800 md:px-10"
           >
             Shorten It!
           </button>
