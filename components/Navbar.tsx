@@ -30,7 +30,7 @@ function Navbar() {
             <li className="">
               <Link href={"#"}>Login</Link>
             </li>
-            <li className="bg-teal-400 text-white px-4 py-2 rounded-full">
+            <li className="bg-teal-400 text-white px-4 py-2 rounded-full hover:bg-teal-200">
               <Link href={"#"}>Sign Up</Link>
             </li>
           </ul>
@@ -91,7 +91,7 @@ function Navbar() {
                     <li className="">
                       <Link href={"#"}>Login</Link>
                     </li>
-                    <li className="bg-teal-400 text-white px-4 md:py-2 rounded-full w-96 py-3 cursor-pointer hover:bg-teal-800">
+                    <li className="bg-teal-400 text-white px-4 md:py-2 rounded-full w-96 py-3 cursor-pointer">
                       <Link href={"#"}>Sign Up</Link>
                     </li>
                   </ul>
