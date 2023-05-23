@@ -5,8 +5,8 @@ import { useState } from "react";
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className="fixed w-full p-8 bg-white">
-      <div className="flex justify-between items-center h-full w-full">
+    <nav className="fixed bg-white z-10 top-0 left-0 right-0 p-8">
+      <div className="flex justify-between items-center h-full">
         <div className="flex items-center space-x-8">
           <Link href={"/"} className="font-bold text-3xl">
             Shortly
@@ -14,13 +14,19 @@ function Navbar() {
           <div className="hidden sm:flex">
             <ul className="hidden sm:flex space-x-4">
               <li className="">
-                <Link href={"#"}>Features</Link>
+                <Link href={"#"} className="hover:font-bold">
+                  Features
+                </Link>
               </li>
               <li className="">
-                <Link href={"#"}>Pricing</Link>
+                <Link href={"#"} className="hover:font-bold">
+                  Pricing
+                </Link>
               </li>
               <li className="">
-                <Link href={"#"}>Resources</Link>
+                <Link href={"#"} className="hover:font-bold">
+                  Resources
+                </Link>
               </li>
             </ul>
           </div>
@@ -28,7 +34,9 @@ function Navbar() {
         <div className="hidden sm:flex">
           <ul className="hidden sm:flex space-x-4 items-center">
             <li className="">
-              <Link href={"#"}>Login</Link>
+              <Link href={"#"} className="hover:font-bold">
+                Login
+              </Link>
             </li>
             <li className="bg-teal-400 text-white px-4 py-2 rounded-full hover:bg-teal-200">
               <Link href={"#"}>Sign Up</Link>
