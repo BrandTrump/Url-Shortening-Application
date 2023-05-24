@@ -2,7 +2,7 @@ import InfoCard from "./InfoCard";
 
 function InfoSection() {
   return (
-    <div className="mt-20 pb-20 w-3/4 mx-auto">
+    <div className="mt-20 pb-20 w-5/6 mx-auto">
       <div className="flex flex-col space-y-4 text-center lg:w-1/2 mx-auto lg:pb-10">
         <h1 className="font-bold text-4xl">Advanced Statistics</h1>
         <p className="text-gray-500 text-lg">
