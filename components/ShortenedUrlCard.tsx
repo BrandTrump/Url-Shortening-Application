@@ -19,8 +19,8 @@ function ShortenedUrlCard({
 
   return (
     <div className="md:w-full">
-      <div className="bg-violet-950 w-96 mx-auto p-10 md:-mt-16 rounded-xl md:w-3/4">
-        <div className="flex flex-col space-y-8 md:flex-row md:justify-between md:items-center md:space-y-0 md:space-x-10">
+      <div className="bg-violet-950 w-5/6 -mt-20 mx-auto p-6 md:-mt-12 rounded-xl md:w-3/4">
+        <div className="flex flex-col space-y-5 md:flex-row md:justify-between md:items-center md:space-y-0 md:space-x-10">
           <input
             type="text"
             value={searchString}
