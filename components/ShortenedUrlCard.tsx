@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import Card from "./Card";
 
 function ShortenedUrlCard({
@@ -12,9 +12,13 @@ function ShortenedUrlCard({
   const [searchString, setSearchString] = useState("");
   const [searchedUrl, setSearchedUrl] = useState("");
 
+  const [pending, startTransition] = useTransition();
+
   const handleSearch = async () => {
-    setShortenedUrl(await search(searchString));
-    setSearchedUrl(searchString);
+    startTransition(async () => {
+      setShortenedUrl(await search(searchString));
+      setSearchedUrl(searchString);
+    });
   };
 
   return (
@@ -29,6 +33,7 @@ function ShortenedUrlCard({
             placeholder="Shorten a link here..."
           />
           <button
+            disabled={pending}
             onClick={handleSearch}
             className="bg-teal-400 text-white font-bold p-3 rounded-md hover:bg-teal-200 disabled:bg-teal-800 md:px-10"
           >
