@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <div className="bg-slate-800 flex flex-col items-center justify-center p-20 text-center space-y-8">
+    <div className="bg-slate-800 flex flex-col items-center justify-center p-20 text-center space-y-8 md:flex-row md:items-start md:space-y-0 md:justify-between md:flex-wrap">
       <h1 className="text-white font-bold text-4xl">Shortly</h1>
       <div className="flex flex-col space-y-3">
         <h2 className="text-white font-bold text-lg">Features</h2>
