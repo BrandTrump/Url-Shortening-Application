@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="fixed bg-white z-10 top-0 left-0 right-0 p-8">
       <div className="flex justify-between items-center h-full">
         <div className="flex items-center space-x-8">
-          <Link href={"/"} className="font-bold text-3xl">
+          <Link href={"/"} className="font-bold text-4xl">
             Shortly
           </Link>
           <div className="hidden sm:flex">
@@ -62,7 +62,7 @@ function Navbar() {
               />
             </svg>
           ) : (
-            <div className="absolute top-20 left-0 w-full z-50 border bg-violet-950 text-white font-bold rounded-2xl p-4">
+            <div className="absolute top-20 left-1/2 -translate-x-1/2 z-50 border bg-violet-950 text-white font-bold rounded-2xl p-4 w-5/6">
               <div className="flex flex-col items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ function Navbar() {
                     <li className="">
                       <Link href={"#"}>Login</Link>
                     </li>
-                    <li className="bg-teal-400 text-white px-4 md:py-2 rounded-full w-96 py-3 cursor-pointer">
+                    <li className="bg-teal-400 text-white px-8 md:py-2 rounded-full w-full py-3 cursor-pointer">
                       <Link href={"#"}>Sign Up</Link>
                     </li>
                   </ul>
