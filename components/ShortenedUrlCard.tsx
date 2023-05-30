@@ -24,7 +24,7 @@ function ShortenedUrlCard({
   return (
     <div className="md:w-full">
       <div className="bg-violet-950 w-5/6 -mt-20 mx-auto p-8 md:-mt-14 rounded-xl md:w-3/4 md:py-10">
-        <div className="flex flex-col space-y-5 md:flex-row md:justify-between md:items-center md:space-y-0 md:space-x-10">
+        <form className="flex flex-col space-y-5 md:flex-row md:justify-between md:items-center md:space-y-0 md:space-x-10">
           <input
             type="text"
             value={searchString}
@@ -33,13 +33,14 @@ function ShortenedUrlCard({
             placeholder="Shorten a link here..."
           />
           <button
+            type="submit"
             disabled={pending}
             onClick={handleSearch}
             className="bg-teal-400 text-white font-bold p-3 rounded-md hover:bg-teal-200 disabled:bg-teal-800 md:px-10"
           >
             Shorten It!
           </button>
-        </div>
+        </form>
       </div>
 
       {!searchedUrl ? null : (
