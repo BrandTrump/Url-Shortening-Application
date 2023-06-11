@@ -14,10 +14,13 @@ function ShortenedUrlCard({
 
   const [pending, startTransition] = useTransition();
 
+  const [toggleCopy, setToggleCopy] = useState(false);
+
   const handleSearch = async () => {
     startTransition(async () => {
       setShortenedUrl(await search(searchString));
       setSearchedUrl(searchString);
+      setToggleCopy(false);
     });
   };
 
@@ -44,7 +47,12 @@ function ShortenedUrlCard({
       </div>
 
       {!searchedUrl ? null : (
-        <Card shortenedUrl={shortenedUrl} searchString={searchedUrl} />
+        <Card
+          shortenedUrl={shortenedUrl}
+          searchString={searchedUrl}
+          toggleCopy={toggleCopy}
+          setToggleCopy={setToggleCopy}
+        />
       )}
     </div>
   );
