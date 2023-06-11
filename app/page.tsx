@@ -7,9 +7,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <div className="bg-white pb-40 md:pb-20">
-        <div className="pt-20 flex flex-col-reverse md:justify-between md:flex-row md:pb-20 md:items-center overflow-hidden md:space-x-20">
+        <div className="pt-20 flex flex-col-reverse md:justify-between md:flex-row md:pb-20 md:items-center overflow-hidden md:space-x-20 2xl:w-3/5 mx-auto ">
           <div className="flex flex-col justify-center items-center text-center px-8 space-y-8 mt-14 md:text-start md:items-start md:px-8">
             <div className="space-y-4">
               <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl">
@@ -37,9 +37,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <ShorteningField />
-      <InfoSection />
+
+      <div className="2xl:w-3/5 mx-auto">
+        <ShorteningField />
+        <InfoSection />
+      </div>
       <CallToAction />
-    </div>
+    </>
   );
 }

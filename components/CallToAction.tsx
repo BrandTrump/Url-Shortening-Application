@@ -3,7 +3,7 @@ import Link from "next/link";
 function CallToAction() {
   return (
     <div className="bg-violet-950">
-      <div className="bg-[url('/bg-boost-desktop.svg')] object-cover w-full h-full bg-no-repeat">
+      <div className="bg-[url('/bg-boost-desktop.svg')] object-cover w-full h-full lg:bg-none">
         <div className="py-14 px-10 text-center text-white flex flex-col space-y-4 md:py-18">
           <h1 className="font-bold text-3xl">Boost your links today</h1>
           <Link
