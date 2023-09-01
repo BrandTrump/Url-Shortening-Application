@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="bg-white pb-40 md:pb-30 pt-20 md:pt-10">
+      <div className="bg-white pb-40 md:pb-30 pt-20 md:pt-10 overflow-hidden">
         <div className="flex flex-col mt-6 xl:flex-row xl:items-center xl:mt-[4.875rem] max-w-container mx-auto">
           <Image
             src={workingImg}
