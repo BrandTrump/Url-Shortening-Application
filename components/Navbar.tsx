@@ -6,7 +6,7 @@ function Navbar() {
   const [toggle, setToggle] = useState(false);
   return (
     <nav className="fixed bg-white z-10 top-0 left-0 right-0 p-8">
-      <div className="flex justify-between items-center h-full">
+      <div className="flex justify-between items-center h-full max-w-container mx-auto">
         <div className="flex items-center space-x-8">
           <Link href={"/"} className="font-bold text-4xl">
             Shortly

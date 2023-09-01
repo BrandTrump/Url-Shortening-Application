@@ -26,7 +26,7 @@ function Card({
   };
 
   return (
-    <div className="bg-white w-5/6 flex justify-center flex-col items-center mx-auto mt-10 rounded-xl space-y-4 p-6 md:w-3/4 md:flex-row md:items-center md:space-y-0 md:space-x-10 shadow-sm">
+    <div className="bg-white flex justify-center flex-col items-center mx-auto mt-10 rounded-xl space-y-4 p-6 md:flex-row md:items-center md:space-y-0 md:space-x-10 shadow-sm">
       <div className="flex flex-col space-y-2 w-full font-bold text-xl md:flex-row md:items-center md:space-y-0 md:justify-between md:space-x-0 md:flex-wrap">
         <h1 className="truncate">{searchString}</h1>
         <a

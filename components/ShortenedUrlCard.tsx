@@ -25,8 +25,8 @@ function ShortenedUrlCard({
   };
 
   return (
-    <div className="md:w-full">
-      <div className="bg-violet-950 w-5/6 -mt-20 mx-auto p-8 md:-mt-14 rounded-xl md:w-3/4 md:py-10">
+    <div className="md:w-full px-4 xl:px-0">
+      <div className="bg-violet-950 w-full -mt-20 mx-auto p-8 md:-mt-14 rounded-xl  md:py-10 bg-shorten-mobile bg-no-repeat bg-cover xl:px-16 xl:py-[3.25rem] xl:bg-shorten-desktop xl:bg-left-bottom">
         <form className="flex flex-col space-y-5 md:flex-row md:justify-between md:items-center md:space-y-0 md:space-x-10">
           <input
             type="text"

@@ -2,18 +2,16 @@ import Link from "next/link";
 
 function CallToAction() {
   return (
-    <div className="bg-violet-950">
-      <div className="bg-[url('/bg-boost-desktop.svg')] object-cover w-full h-full lg:bg-none">
-        <div className="py-14 px-10 text-center text-white flex flex-col space-y-4 md:py-18">
-          <h1 className="font-bold text-3xl">Boost your links today</h1>
-          <Link
-            href="#"
-            className="bg-teal-500 py-3 px-10 w-auto mx-auto rounded-full hover:bg-teal-300 font-bold"
-          >
-            Get Started
-          </Link>
-        </div>
-      </div>
+    <div className="bg-violet-950 mt-20 bg-very-dark-purple px-4 py-[5.625rem] text-center text-white bg-bg-boost-mobile bg-no-repeat bg-cover xl:mt-44 xl:px-10 xl:py-14 xl:bg-bg-boost-desktop xl:bg-center">
+      <h1 className="text-h4 leading-h4 font-bold tracking-[-1] xl:text-h3 xl:leading-h3">
+        Boost your links today
+      </h1>
+      <Link
+        href="#"
+        className="bg-teal-500 inline-block mt-4  rounded-full hover:bg-teal-300 px-10 py-[0.8125rem] font-bold text-h6 leading-h6 xl:mt-8 transition-colors"
+      >
+        Get Started
+      </Link>
     </div>
   );
 }
