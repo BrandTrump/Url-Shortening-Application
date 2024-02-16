@@ -1,27 +1,28 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import Card from "./Card";
+import axios from "axios";
 
-function ShortenedUrlCard({
-  search,
-}: {
-  search: (search: string) => Promise<string>;
-}) {
+function ShortenedUrlCard() {
   const [shortenedUrl, setShortenedUrl] = useState("");
   const [searchString, setSearchString] = useState("");
   const [searchedUrl, setSearchedUrl] = useState("");
 
-  const [pending, startTransition] = useTransition();
-
   const [toggleCopy, setToggleCopy] = useState(false);
 
-  const handleSearch = async () => {
-    startTransition(async () => {
-      setShortenedUrl(await search(searchString));
+  const handleSearch = async (e: any) => {
+    e.preventDefault();
+    try {
+      if (!searchString) return;
       setSearchedUrl(searchString);
-      setToggleCopy(false);
-    });
+      const response = await axios.post("/api/shorten", { url: searchString });
+      const shortenedUrl = response.data;
+      console.log("Shortened URL:", shortenedUrl);
+      setShortenedUrl(shortenedUrl.result_url);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -37,9 +38,9 @@ function ShortenedUrlCard({
           />
           <button
             type="submit"
-            disabled={pending}
+            disabled={true}
             onClick={handleSearch}
-            className="bg-teal-400 text-white font-bold p-3 rounded-md hover:bg-teal-200 disabled:bg-teal-800 md:px-10"
+            className="bg-teal-400 text-white font-bold p-3 rounded-md hover:bg-teal-200 disabled:bg-teal-800 md:px-10 disabled:cursor-not-allowed"
           >
             Shorten It!
           </button>

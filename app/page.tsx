@@ -1,7 +1,7 @@
 import workingImg from "@/assets/images/illustration-working.svg";
 import CallToAction from "@/components/CallToAction";
 import InfoSection from "@/components/InfoSection";
-import ShorteningField from "@/components/ShorteningField";
+import ShortenedUrlCard from "@/components/ShortenedUrlCard";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,7 +34,7 @@ export default function Home() {
       </div>
 
       <div className="max-w-container mx-auto">
-        <ShorteningField />
+        <ShortenedUrlCard />
         <InfoSection />
       </div>
       <CallToAction />
