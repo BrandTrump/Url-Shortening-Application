@@ -7,6 +7,9 @@ function InfoSection() {
   return (
     <div className="mt-20 mx-auto px-4 xl:px-0">
       <div className="flex flex-col space-y-4 text-center lg:w-1/2 mx-auto lg:pb-10">
+        <div className="p-2 bg-red-500 text-white rounded-lg font-semibold">
+          <h1>Note: The URL shortening field has been disabled</h1>
+        </div>
         <h2 className="text-h4 leading-h4 tracking-[-0.7px] font-bold text-dark xl:text-h3 xl:leading-h3">
           Advanced Statistics
         </h2>
