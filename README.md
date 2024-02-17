@@ -25,7 +25,7 @@ Users should be able to:
 - The `input` field is empty
 
 ### Links
-- Live Site URL: [url-shortening-m9ic18wkh-brandtrump.vercel.app](url-shortening-m9ic18wkh-brandtrump.vercel.app)
+- Live Site URL: [https://url-shortening-app-brandtrump.vercel.app/](https://url-shortening-app-brandtrump.vercel.app/)
 
 ## My process
 
